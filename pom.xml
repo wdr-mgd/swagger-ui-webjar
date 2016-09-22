@@ -18,7 +18,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.url>https://github.com/swagger-api/swagger-ui/archive/v${version.unsnapshot}.zip</upstream.url>
+        <upstream.url>https://github.com/wdr-mgd/swagger-ui/archive/v${version.unsnapshot}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
@@ -44,9 +44,9 @@
     </licenses>
 
     <scm>
-        <url>http://github.com/webjars/swagger-ui</url>
-        <connection>scm:git:https://github.com/webjars/swagger-ui.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/swagger-ui.git</developerConnection>
+        <url>http://github.com/wdr-mgd/swagger-ui-webjar</url>
+        <connection>scm:git:https://github.com/wdr-mgd/swagger-ui-webjar.git</connection>
+        <developerConnection>scm:git:https://github.com/wdr-mgd/swagger-ui-webjar.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     
