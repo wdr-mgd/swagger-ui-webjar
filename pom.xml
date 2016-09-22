@@ -7,7 +7,7 @@
         <artifactId>oss-parent</artifactId>
         <version>9</version>
     </parent>
-    
+
     <packaging>jar</packaging>
     <groupId>de.wdrmg</groupId>
     <artifactId>swagger-ui</artifactId>
@@ -25,6 +25,7 @@
                 "paths": { "swagger-ui": "swagger-ui" }
             }
         </requirejs>
+        <repo.base.url>http://server2.wdrmg-digital.de/nexus</repo.base.url>
     </properties>
 
     <developers>
@@ -49,7 +50,25 @@
         <developerConnection>scm:git:https://github.com/wdr-mgd/swagger-ui-webjar.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-    
+
+    <distributionManagement>
+      <repository>
+        <id>wdrmg-release</id>
+        <name>WDRmg-Maven-Repository - Releases</name>
+        <url>${repo.base.url}/content/repositories/releases/</url>
+      </repository>
+      <snapshotRepository>
+        <id>wdrmg-snapshot</id>
+        <name>WDRmg-Maven-Repository - Snapshots</name>
+        <url>${repo.base.url}/content/repositories/snapshots/</url>
+      </snapshotRepository>
+      <site>
+        <id>wdrmg-sites</id>
+        <name>WDRmg-Maven-Repository - Sites</name>
+        <url>dav:${repo.base.url}/content/sites/sites/</url>
+      </site>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -109,17 +128,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.5</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>sonatype-nexus-staging</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
             </plugin>
         </plugins>
     </build>
