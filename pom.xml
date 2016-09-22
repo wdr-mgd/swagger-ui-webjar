@@ -9,9 +9,9 @@
     </parent>
     
     <packaging>jar</packaging>
-    <groupId>org.webjars</groupId>
+    <groupId>de.wdrmg</groupId>
     <artifactId>swagger-ui</artifactId>
-    <version>2.2.3-SNAPSHOT</version>
+    <version>2.2.4-SNAPSHOT</version>
     <name>Swagger UI</name>
     <description>WebJar for Swagger UI</description>
     <url>http://webjars.org</url>
